@@ -1,38 +1,146 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Comfortaa"; */
+  font-family: "Poppins";
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --darkgrey: rgb(65, 65, 65);
+  --blue: rgb(39, 126, 167);
+  --lightblue: rgb(92, 172, 209);
+  --dullblue: #4e9797;
+  --letterSpacing: 0.1rem;
+  --body: rgb(245, 245, 245);
+}
+.container {
+  height: 100vh;
+  background-color: var(--lightBlue);
+  max-width: 960px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+body {
+  background-color: var(--body);
+}
+/************* ---- NAVBAR ---- **************/
+nav {
+  background-color: var(--white);
+  padding: 0.5rem;
+  color: var(--darkgrey);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+nav h4 {
+  color: var(--darkgrey);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: var(--letterSpacing);
+}
+.logo span {
+  color: var(--blue);
+}
+.status {
+  display: flex;
+  gap: 1rem;
+}
+.carticon {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgb(245, 247, 253);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+.carticon .badge {
+  font-weight: 500;
+  /* color: var(--blue); */
+}
+/************* ---- Cart Item Container ---- **************/
+.cartItemsContainer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--white);
+  min-height: 80%;
+  /* tailwind 36 */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+}
+
+.cartEmpty {
   text-align: center;
+  color: var(--darkgrey);
+  margin-top: 4rem;
 }
+/************* ---- Single Item ---- **************/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.singleItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--lightBlue);
+  padding: 0.5rem 0.25rem;
+  max-width: 560px;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.itemdetails {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  padding-left: 0.5rem;
 }
+.itemdetails h5 {
+  letter-spacing: var(--letterSpacing);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-size: 0.95rem;
+  color: var(--dullblue);
+}
+.itemdetails h4 {
+  color: var(--darkgrey);
+  font-weight: 500;
+}
+.quantity {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.25rem;
 }
-
-.App-link {
-  color: #61dafb;
+.itemImage {
+  height: 70px;
+  object-fit: contain;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  all: unset;
+  color: var(--blue);
+}
+.btn:hover {
+  color: var(--lightblue);
+}
+.svgIcon {
+  height: 24px;
+  fill: var(--blue);
+}
+.status img {
+  height: 20px;
+  object-fit: contain;
+}
+.svgIcon:hover {
+  fill: var(--dullblue);
+}
+.quantity h3 {
+  color: var(--darkgrey);
+  font-weight: 500;
+  font-size: 1rem;
 }
